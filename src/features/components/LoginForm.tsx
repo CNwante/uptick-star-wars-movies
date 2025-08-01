@@ -1,16 +1,14 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import type { LoginFormProps } from "../types/authTypes";
+import type { LoginFormProps } from "../../types/authTypes";
 
 export const LoginForm: React.FC<LoginFormProps> = ({ onFormSubmit }) => {
   const [userName, setUserName] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onFormSubmit(userName);
-    navigate("/movies");
+    if (!userName.trim() || !password.trim()) {alert("Please enter username and password" ); return};
+    onFormSubmit(userName, password);
   }
 
   return (

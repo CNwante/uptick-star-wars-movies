@@ -1,10 +1,15 @@
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import type { RootState } from "../stores/store";
-import type { JSX } from "react";
+import type { ProtectedRouteProps } from "../types/authTypes";
 
+export const ProtectedRoute = ({
+  children,
+  redirectPath = "/login",
+}: ProtectedRouteProps) => {
+  const isAuth = useSelector(
+    (state: RootState) => state.auth.isAuthenticated
+  );
 
-export const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
-  const isAuth = useSelector((state: RootState) => state.auth.isAuthenticated)
-  return isAuth ? children : <Navigate to={"/login"}/>
-}
+  return isAuth ? <>{children}</> : <Navigate to={redirectPath} />;
+};

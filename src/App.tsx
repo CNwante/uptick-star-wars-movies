@@ -2,21 +2,22 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 import { LoginPage } from "./pages/LoginPage";
 import { MoviesPage } from "./pages/MoviesPage";
+import {ROUTES} from "./routes/appRoutes";
 
 function App() {
+
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/login" />}/>
-      <Route path="/login" element={<LoginPage />} />
+      <Route path={ROUTES.login} element={<LoginPage />} />
       <Route
-        path="/movies"
+        path={ROUTES.movies}
         element={
           <ProtectedRoute>
             <MoviesPage />
           </ProtectedRoute>
         }
       />
-      {/* <Route path="/" element={<Navigate to="/movies" />} /> */}
     </Routes>
   );
 }
