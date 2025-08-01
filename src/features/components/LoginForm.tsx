@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
-interface LoginFormProps {
-  onFormSubmit: (userName: string) => void;
-}
+import type { LoginFormProps } from "../types/authTypes";
 
 export const LoginForm: React.FC<LoginFormProps> = ({ onFormSubmit }) => {
   const [userName, setUserName] = useState<string>("");

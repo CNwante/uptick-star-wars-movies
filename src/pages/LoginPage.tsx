@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { login } from "../features/auth/authSlice";
-import { LoginForm } from "../components/LoginForm";
+import { LoginForm } from "../features/components/LoginForm";
 import loginBg from "../assets/login_bg.jpeg";
 import type { AppDispatch } from "../stores/store";
 
@@ -10,6 +10,7 @@ export const LoginPage = () => {
   const handleLogin = (userName: string) => {
     dispatch(login({ username: userName }));
   };
+
   return (
     <section
       className="bg-cover w-full"
