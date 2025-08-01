@@ -1,12 +1,24 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 interface LoginFormProps {
-  userName: string;
-  password: string;
+  onFormSubmit: (userName: string) => void;
 }
 
-export const LoginForm: React.FC<LoginFormProps> = ({ userName, password }) => {
+export const LoginForm: React.FC<LoginFormProps> = ({ onFormSubmit }) => {
+  const [userName, setUserName] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onFormSubmit(userName);
+    navigate("/movies");
+  }
+
   return (
     <form
-      action=""
+      onSubmit={handleSubmit}
       className="max-w-md w-full p-8 bg-white/15 backdrop-blur-sm border border-white/30 rounded-2xl text-center"
     >
       <h1 className="text-4xl font-bold mb-8 text-blue-400">Login</h1>
@@ -14,14 +26,14 @@ export const LoginForm: React.FC<LoginFormProps> = ({ userName, password }) => {
         <input
           type="text"
           value={userName}
-          onChange={(e) => e.target.value}
+          onChange={(e) => setUserName(e.target.value)}
           placeholder="Username"
           className="w-full p-4 rounded-full border border-white/30 bg-white/10 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-400 text-white"
         />
         <input
           type="password"
           value={password}
-          onChange={(e) => e.target.value}
+          onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
           className="w-full p-4 rounded-full border border-white/30 bg-white/10 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-400 text-white"
         />
