@@ -27,7 +27,7 @@ export const LoginPage = () => {
       className="bg-cover w-full"
       style={{ backgroundImage: `url(${loginBg})` }}
     >
-      <div className="h-[100vh] w-full p-4 grid place-items-center inset-0 bg-black/30">
+      <div className="h-screen w-full p-4 grid place-items-center inset-0 bg-black/50">
         <LoginForm onFormSubmit={handleLogin} />
       </div>
     </section>

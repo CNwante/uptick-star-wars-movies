@@ -7,9 +7,12 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onFormSubmit }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!userName.trim() || !password.trim()) {alert("Please enter username and password" ); return};
+    if (!userName.trim() || !password.trim()) {
+      alert("Please enter username and password");
+      return;
+    }
     onFormSubmit(userName, password);
-  }
+  };
 
   return (
     <form
@@ -35,7 +38,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onFormSubmit }) => {
       </fieldset>
       <button
         type="submit"
-        className="w-full p-4 mt-8 rounded-full bg-blue-500 text-white font-semibold hover:bg-blue-600 transition-colors"
+        className="w-full p-4 mt-8 rounded-full bg-blue-500 text-white font-semibold hover:bg-blue-600 hover:cursor-pointer shadow-lg hover:shadow-blue-500/50 transition-transform hover:scale-105"
       >
         Login
       </button>
