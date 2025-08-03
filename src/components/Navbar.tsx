@@ -30,7 +30,7 @@ export const Navbar = () => {
           </span>
           <button
             onClick={handleLogout}
-            className="bg-red-500 hover:bg-red-600 text-white text-sm px-4 py-1 rounded-md transition flex items-center gap-2"
+            className="bg-red-500 hover:bg-red-600 text-white text-sm px-4 py-1 rounded-md transition flex items-center gap-2 cursor-pointer"
           >
             Logout <FiLogOut />
           </button>
