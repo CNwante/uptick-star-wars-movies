@@ -3,6 +3,7 @@ import type { RootState } from "../stores/store";
 import { logout } from "../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
 import swmLogo from "../assets/swm_logo.png";
+import { FiLogOut } from "react-icons/fi";
 
 export const Navbar = () => {
   const dispatch = useDispatch();
@@ -16,9 +17,9 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-gray-900 text-white shadow-md">
+    <nav className="w-full bg-gray-900 text-white shadow-md sticky top-0 z-10-">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-3">
-        <h1 className="text-xl font-bold mb-2 md:mb-0 flex justify-center items-center gap-1 flex-wrap text-center">
+        <h1 className="text-xl font-bold mb-2 md:mb-0 flex justify-center items-center gap-1 flex-wrap text-center text-yellow-300">
           <img src={swmLogo} alt="Star wars movies logo" className="w-8 h-8"/>
           Star Wars Movies
         </h1>
@@ -29,9 +30,9 @@ export const Navbar = () => {
           </span>
           <button
             onClick={handleLogout}
-            className="bg-red-500 hover:bg-red-600 text-white text-sm px-4 py-1 rounded-md transition"
+            className="bg-red-500 hover:bg-red-600 text-white text-sm px-4 py-1 rounded-md transition flex items-center gap-2"
           >
-            Logout
+            Logout <FiLogOut />
           </button>
         </div>
       </div>
