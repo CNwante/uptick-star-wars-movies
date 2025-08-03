@@ -7,16 +7,10 @@ export const fetchMovies = async (): Promise<Movie[]> => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
-    const json = await response.json();
 
-    const movieData: Movie[] = json;
-    return movieData.map((movie) => ({
-      ...movie,
-      opening_crawl:
-        movie.opening_crawl.length > 200
-          ? movie.opening_crawl.slice(0, 200) + "..."
-          : movie.opening_crawl,
-    }));
+    const movieData = await response.json();
+    return movieData;
+
   } catch (error) {
     console.error("Failed to fetch movies:", error);
     throw error;
