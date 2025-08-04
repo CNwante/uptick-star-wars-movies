@@ -19,7 +19,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onFormSubmit }) => {
       onSubmit={handleSubmit}
       className="max-w-md w-full p-8 bg-white/15 backdrop-blur-sm border border-white/30 rounded-2xl text-center"
     >
-      <h1 className="text-4xl font-bold mb-8 text-blue-400">Login</h1>
+      <h2 className="text-4xl font-bold mb-8 text-yellow-400">Login</h2>
       <fieldset className="space-y-6">
         <input
           type="text"
@@ -38,7 +38,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onFormSubmit }) => {
       </fieldset>
       <button
         type="submit"
-        className="w-full p-4 mt-8 rounded-full bg-blue-500 text-white font-semibold hover:bg-blue-600 hover:cursor-pointer shadow-lg hover:shadow-blue-500/50 transition-transform hover:scale-105"
+        className="w-full p-4 mt-8 rounded-full bg-yellow-500 text-black font-semibold hover:bg-blue-600 hover:text-white hover:cursor-pointer shadow-lg hover:shadow-blue-500/50 transition-transform hover:scale-105"
       >
         Login
       </button>
