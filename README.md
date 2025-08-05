@@ -1,82 +1,105 @@
-# Star Wars Movies Project
+# 🌌 Star Wars Movies App
 
-This project is part of the Uptick Week 5 task. It is a web application that lists Star Wars movies using an external API.
+A fully responsive and accessible Star Wars Movies web application built as part of **Week 5 of the Uptick Talent Fellowship Challenge**. This project showcases data fetched from the [Star Wars API (swapi.info)](https://swapi.info), complete with frontend authentication, route protection, and unit testing.
 
----
-
-## Features
-
-- Fetch and display a list of Star Wars movies.
-- Display details such as title, release date, director, and opening crawl.
-- Simple, clean grid-based layout.
+## 🚀 Live Demo
+👉 [View the live app](https://starwarsmovies.surge.sh/)
 
 ---
 
-## Tech Stack
+## 📸 Features
 
-- **React** (Frontend)
-- **TailwindCSS** (Styling)
-- **TypeScript**
-- **Redux Toolkit**
+- 🔐 **Authentication System**
+  - Redux Toolkit for state management
+  - Redux Persist for storing login state
+  - Protected routes and redirect logic
+
+- 🎬 **Movies Listing Grid**
+  - Data fetched from the Star Wars API
+  - Responsive movie card layout
+  - Each card displays:
+    - Movie title
+    - Release date
+    - Opening crawl
+    - "More Info" (dummy link)
+
+- 💅 **UI and UX**
+  - Built with **React**, **TypeScript**, and **Tailwind CSS**
+  - Smooth **hover effects** on movie cards
+  - Fully **responsive** layout
+  - Basic **accessibility** practices applied
+
+- 🧪 **Testing**
+  - 5+ unit tests written with **React Testing Library** and **Vitest**
+  - Covers components, routing, and logic
 
 ---
 
-## Project Structure
+## 🛠️ Tech Stack
 
-- src/components – UI components for movies and layout.
-- src/pages – Page-level components (e.g., Movies List).
-- src/services – API-related logic.
-- src/assets – Images and static files.
+- **Framework:** React + TypeScript
+- **Styling:** Tailwind CSS
+- **State Management:** Redux Toolkit + Redux Persist
+- **Routing:** React Router DOM
+- **Testing:** React Testing Library + Vitest
+- **Deployment:** Surge
 
 ---
 
-## Getting Started
+## 📁 Folder Structure
 
-### Prerequisites
+```
+src/
+│
+├── assets/ # Images or static assets
+├── components/ # Reusable UI components (Navbar, MovieCard, etc.)
+├── features/ # Redux slices (auth)
+├── hooks/ # Custom hooks
+├── pages/ # Route pages (Login, Movies)
+├── services/ # API logic (swapi.ts)
+├── store/ # Redux store setup
+├── types/ # Shared TypeScript types
+├── utils/ # Helper functions
+├── App.tsx
+└── main.tsx
+```
 
-- Node.js (>=18)
-- npm or yarn
+---
+## 🧠 What I Learned
 
-### Installation
+- Structuring scalable React + TypeScript applications
+- Implementing auth flow with Redux Toolkit and route protection
+- Fetching and mapping external API data into a responsive UI
+- Writing testable, maintainable components
+- Balancing performance, accessibility, and responsiveness
+- Managing time and progress under a tight deadline
 
-1. Clone the repository:
-   git clone https://github.com/your-username/star-wars-movies.git
-2. Navigate to the project folder:
-   cd star-wars-movies
-3. Install dependencies:
-   npm install
+---
 
-### Run the project
+## ✅ Getting Started
+
+### To run the project locally:
+
+```bash
+git clone https://github.com/your-username/star-wars-movies.git
+
+cd star-wars-movies
+
+npm install
 
 npm run dev
+```
+### To run test
+```bash
+npm run test
+```
+---
 
-### Build for production
-
-npm run build
+## 📄 License
+This project is part of the Uptick Talent Fellowship and is intended for educational purposes.
 
 ---
 
-## Branching Strategy
-
-Given the short timeframe, a **minimal Git branching strategy** will be used:
-
-- main – Always stable and ready to submit.
-- dev – Active development branch.
-- feature/ – Short-lived optional branches for individual features (merged back into dev).
-
-Example flow:
-```
- main  <--- stable
-     \
-      dev  <--- main work happens here
-     /   \
-setup	  \
-       	  feature/authentication
-          feature/movie-grid
-```
-
----
-
-## License
-
-MIT License
+## 🤝 Acknowledgements
+- Uptick Africa: https://www.uptickafrica.com/
+- SWAPI (Star Wars API): https://swapi.info/
