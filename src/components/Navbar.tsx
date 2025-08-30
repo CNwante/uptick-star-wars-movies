@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../stores/store";
 import { logout } from "../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
-import swmLogo from "../assets/swm_logo.webp";
+import { LOGO } from "../constants/assets";
 import { FiLogOut } from "react-icons/fi";
 
 export const Navbar = () => {
@@ -20,7 +20,7 @@ export const Navbar = () => {
     <nav className="w-full bg-gray-900 text-white shadow-md sticky top-0 z-10-">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-3">
         <h1 className="text-xl font-bold mb-2 md:mb-0 flex justify-center items-center gap-1 flex-wrap text-center text-yellow-300">
-          <img src={swmLogo} alt="Star wars movies logo" className="w-8 h-8"/>
+          <img src={LOGO} alt="Star wars movies logo" className="w-8 h-8"/>
           Star Wars Movies
         </h1>
 

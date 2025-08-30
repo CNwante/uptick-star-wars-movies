@@ -7,7 +7,7 @@ import type { AppDispatch } from "../stores/store";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import type { RootState } from "../stores/store";
-import starWarsLogo from "../assets/swm_logo.webp";
+import { LOGO } from "../constants/assets";
 
 export const LoginPage = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -31,7 +31,7 @@ export const LoginPage = () => {
       <div className="h-screen w-full p-4 grid place-items-center inset-0 bg-black/50">
         <div className="flex flex-col justify-center items-center">
           <img
-            src={starWarsLogo}
+            src={LOGO}
             alt="Star wars movies logo"
             className="max-w-24"
           />
