@@ -5,7 +5,7 @@ import type { Movie } from "../types/movieTypes";
 import { Spinner } from "../components/Spinner";
 import { Navbar } from "../components/Navbar";
 
-export const MoviesPage = () => {
+const MoviesPage = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -42,3 +42,5 @@ export const MoviesPage = () => {
     </div>
   );
 };
+
+export default MoviesPage;

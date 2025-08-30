@@ -9,7 +9,7 @@ import { Navigate } from "react-router-dom";
 import type { RootState } from "../stores/store";
 import { LOGO } from "../constants/assets";
 
-export const LoginPage = () => {
+const LoginPage = () => {
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
 
@@ -44,3 +44,5 @@ export const LoginPage = () => {
     </section>
   );
 };
+
+export default LoginPage;
