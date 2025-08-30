@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../stores/store";
 import { logout } from "../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
-import swmLogo from "../assets/swm_logo.png";
+import swmLogo from "../assets/swm_logo.webp";
 import { FiLogOut } from "react-icons/fi";
 
 export const Navbar = () => {

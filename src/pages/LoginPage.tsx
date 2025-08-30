@@ -7,7 +7,7 @@ import type { AppDispatch } from "../stores/store";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import type { RootState } from "../stores/store";
-import starWarsLogo from "../assets/swm_logo.png";
+import starWarsLogo from "../assets/swm_logo.webp";
 
 export const LoginPage = () => {
   const dispatch = useDispatch<AppDispatch>();
