@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from "../features/auth/authSlice";
 import { LoginForm } from "../features/components/LoginForm";
-import loginBg from "../assets/login_bg.jpeg";
+import loginBg from "../assets/login_bg.webp";
 import type { AppDispatch } from "../stores/store";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
