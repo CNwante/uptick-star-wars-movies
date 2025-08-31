@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://uptick-star-wars-movies.vercel.app/sitemap.xml
