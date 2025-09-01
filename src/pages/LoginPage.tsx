@@ -2,14 +2,14 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { login } from "../features/auth/authSlice";
 import { LoginForm } from "../features/components/LoginForm";
-import loginBg from "../assets/login_bg.jpeg";
+import loginBg from "../assets/login_bg.webp";
 import type { AppDispatch } from "../stores/store";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import type { RootState } from "../stores/store";
-import starWarsLogo from "../assets/swm_logo.png";
+import { LOGO } from "../constants/assets";
 
-export const LoginPage = () => {
+const LoginPage = () => {
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
 
@@ -31,8 +31,10 @@ export const LoginPage = () => {
       <div className="h-screen w-full p-4 grid place-items-center inset-0 bg-black/50">
         <div className="flex flex-col justify-center items-center">
           <img
-            src={starWarsLogo}
+            src={LOGO}
             alt="Star wars movies logo"
+            width={256}
+            height={256}
             className="max-w-24"
           />
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-yellow-400 tracking-wide">
@@ -44,3 +46,5 @@ export const LoginPage = () => {
     </section>
   );
 };
+
+export default LoginPage;

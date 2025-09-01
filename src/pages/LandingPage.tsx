@@ -2,8 +2,8 @@ import { useSelector } from "react-redux";
 import type { RootState } from "../stores/store";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import bgStars from "../assets/stars-bg.jpg";
-import starWarsLogo from "../assets/swm_logo.png";
+import bgStars from "../assets/stars-bg.webp";
+import { LOGO } from "../constants/assets";
 
 export const LandingPage = () => {
   const navigate = useNavigate();
@@ -25,7 +25,10 @@ export const LandingPage = () => {
       <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
       <div className="relative z-10 max-w-4xl text-center px-6 bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-lg ">
         <img
-          src={starWarsLogo}
+          src={LOGO}
+          width={256}
+          height={256}
+          fetchPriority="high"
           alt="Star wars movies logo"
           className="max-w-24 m-auto"
         />
