@@ -99,6 +99,10 @@ npm run test
 This project is part of the Uptick Talent Fellowship and is intended for educational purposes.
 
 ---
+## 📈 Optimization
+Optimization Report → See  [optimization/README.md](optimization/README.md)
+
+---
 
 ## 🤝 Acknowledgements
 - Uptick Africa: https://www.uptickafrica.com/
