@@ -33,6 +33,8 @@ const LoginPage = () => {
           <img
             src={LOGO}
             alt="Star wars movies logo"
+            width={256}
+            height={256}
             className="max-w-24"
           />
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-yellow-400 tracking-wide">
