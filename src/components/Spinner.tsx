@@ -1,4 +1,4 @@
-import spinner from "../assets/spinner.png";
+import spinner from "../assets/spinner.webp";
 
 export const Spinner = () => {
   return (
